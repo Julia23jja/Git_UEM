@@ -1,0 +1,7 @@
+package dam.ejercicio2.pojo;
+
+public class DatosMotor {
+	private String id;
+	private String tipoMotor;
+	private String potencia;
+}

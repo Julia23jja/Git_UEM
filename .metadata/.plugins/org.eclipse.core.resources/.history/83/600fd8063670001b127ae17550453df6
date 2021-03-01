@@ -1,0 +1,10 @@
+package dam.ejercicio2.pojo;
+
+public class DatosCoche {
+	private String id;
+	private String matricula;
+	private String modelo;
+	private String marca;
+	
+
+}

@@ -1,0 +1,21 @@
+package ejer15;
+
+import java.util.Scanner;
+
+public class CompañiaTelefonica {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Introduce la duración de la llamada");
+		double duracion = Double.parseDouble(sc.nextLine);
+		
+		
+		
+		
+		
+		sc.close();
+
+	}
+
+}

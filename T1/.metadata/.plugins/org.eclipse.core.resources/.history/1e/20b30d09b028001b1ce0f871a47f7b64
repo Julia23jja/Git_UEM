@@ -1,0 +1,60 @@
+package ejer15;
+
+import java.util.Scanner;
+
+public class CompañiaTelefonica {
+	static final double IMPUESTODOM = 0.3;
+	static final double IMPUESTOMAN = 0.15;
+	static final double IMPUESTOTAR = 0.10;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Introduce la duración de la llamada (min)");
+		double duracion = Double.parseDouble(sc.nextLine());
+		
+		System.out.println("Introduce el día que realizó la llamada(Domingo/resto)");
+		String dia = sc.nextLine();
+		
+		System.out.println("Introduce cuándo se realizó la llamada (Mañana/Tarde)");
+		String turno = sc.nextLine();
+		
+		double coste = 0;
+		double resultado = 0;
+		String domingo = null;
+		String resto = null;
+		String mañana = null;
+		String op1;
+		
+		//CALCULAR LA DURACIÓN
+		if (duracion == 5) {
+			coste = duracion * 1;
+		} else if (duracion == 8) {
+			coste = duracion * 0.8;
+		} else if (duracion == 10) {
+			coste = duracion * 0.70;
+		} else if (duracion > 10) {
+			coste = duracion * 0.50;
+		}
+		System.out.println(coste);
+		
+		//CALCULAR DÍA
+		if (dia.equalsIgnoreCase(domingo)) {
+			resultado = (coste + (coste * IMPUESTODOM));
+		}
+		if (dia.equalsIgnoreCase(resto)) {
+			if (turno.equalsIgnoreCase(mañana)) {
+				resultado = coste + (coste * IMPUESTOMAN);
+			} else {
+				resultado = coste + (coste * IMPUESTOTAR);
+			}
+		}
+		
+		//CALCULAR TURNO
+
+		System.out.println("Este es el coste de la llamada " + resultado + " €");
+		sc.close();
+
+	}
+
+}
